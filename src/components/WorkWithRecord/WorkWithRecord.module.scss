@@ -2,6 +2,7 @@
 
 .form {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(8, 1fr);
   border: 1px solid black;
   grid-template-areas: " compDate compName docName docType docStatus employNum employDate employName" ". . . . . . approve  reset ";
