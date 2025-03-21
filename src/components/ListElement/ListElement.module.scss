@@ -1,0 +1,56 @@
+@use "../../utils/style/variables.scss" as *;
+
+.li {
+  margin: 8px 0;
+
+  &:hover {
+    background-color: $background-second;
+    opacity: 0.75;
+  }
+
+  &:hover .button {
+    display: block;
+  }
+
+  &_isChange {
+    &:hover {
+      background-color: transparent;
+      opacity: 1;
+    }
+  }
+}
+
+.element {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  position: relative;
+}
+
+.button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  border: solid 1px black;
+  position: absolute;
+  display: none;
+  right: 0;
+
+  &_change {
+    top: -8px;
+  }
+
+  &_remove {
+    bottom: -8px;
+  }
+
+  &:disabled {
+    background-color: $background-second;
+  }
+}
+
+.icon * {
+  width: 28px;
+  height: 28px;
+}

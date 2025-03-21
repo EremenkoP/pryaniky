@@ -1,0 +1,42 @@
+@use '../../utils/style/variables.scss' as *;
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border: 1px solid black;
+  grid-template-areas: " compDate compName docName docType docStatus employNum employDate employName" ". . . . . . approve  reset ";
+  gap: 8px;
+  padding: 4px;
+
+  &__compDate {
+    grid-area: compDate;
+  }
+
+  &__compName {
+    grid-area: compName;
+  }
+  &__docName {
+    grid-area: docName;
+  }
+  &__docType {
+    grid-area: docType;
+  }
+  &__docStatus {
+    grid-area: docStatus;
+  }
+  &__employNum {
+    grid-area: employNum;
+  }
+  &__employDate {
+    grid-area: employDate;
+  }
+  &__employName {
+    grid-area: employName;
+  }
+  &__approve {
+    grid-area: approve;
+  }
+  &__reset {
+    grid-area: reset;
+  }
+}
